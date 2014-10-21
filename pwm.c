@@ -49,14 +49,14 @@ void pwm_clk_config(clk_src_t const clk_src, uint8 const p_prescale, uint8 const
 void pwm_chan_init(pwm_channel_t const n, clk_src_t const clk_src,uint8 const align, uint8 const polarity)
 {
 	MCF_PWM_PWME &= ~(1 << n);
-	gpio_port_init(p_port_tc, p_pin_0, gpio_funct_tertiary, p_data_dir_x, p_state_x);
-	gpio_port_init(p_port_ta, p_pin_0, gpio_funct_tertiary, p_data_dir_x, p_state_x);
-	gpio_port_init(p_port_tc, p_pin_1, gpio_funct_tertiary, p_data_dir_x, p_state_x);
-	gpio_port_init(p_port_ta, p_pin_1, gpio_funct_tertiary, p_data_dir_x, p_state_x);
+	//gpio_port_init(p_port_tc, p_pin_0, gpio_funct_tertiary, p_data_dir_x, p_state_x);
+	//gpio_port_init(p_port_ta, p_pin_0, gpio_funct_tertiary, p_data_dir_x, p_state_x);
+	//gpio_port_init(p_port_tc, p_pin_1, gpio_funct_tertiary, p_data_dir_x, p_state_x);
+	//gpio_port_init(p_port_ta, p_pin_1, gpio_funct_tertiary, p_data_dir_x, p_state_x);
 	gpio_port_init(p_port_tc, p_pin_2, gpio_funct_tertiary, p_data_dir_x, p_state_x);
 	gpio_port_init(p_port_ta, p_pin_2, gpio_funct_tertiary, p_data_dir_x, p_state_x);
 	gpio_port_init(p_port_tc, p_pin_3, gpio_funct_tertiary, p_data_dir_x, p_state_x);
-	gpio_port_init(p_port_ta, p_pin_3, gpio_funct_tertiary, p_data_dir_x, p_state_x);
+	//gpio_port_init(p_port_ta, p_pin_3, gpio_funct_tertiary, p_data_dir_x, p_state_x);
 	switch(clk_src)
 	{
 		case clk_src_a:
