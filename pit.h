@@ -1,5 +1,5 @@
 //
-//  pwm.h
+//  pit.h
 //
 //	Proj02
 //  Lab Partners: Sean Slamka, Aydin Balci
@@ -9,19 +9,9 @@
 //
 
 typedef enum {
- clk_src_a  = 0, //
- clk_src_sa = 1, //
- clk_src_b  = 2, //
- clk_src_sb = 3
-} clk_src_t;
+ pit_timer_0 = 0, //
+ pit_timer_1 = 1 //
+} pit_timer_t;
 
-typedef enum {
- pwm_channel_1  = 0, //
- pwm_channel_2  = 1, //
- pwm_channel_3  = 2, //
- pwm_channel_4  = 3, //
- pwm_channel_5  = 4, //
- pwm_channel_6  = 5, //
- pwm_channel_7  = 6, //
- pwm_channel_8  = 7 //
-} pwm_channel_t;
+static int_isr_t g_pit_callbacks[2] = {0};
+static int_isr_t g_pit_isrs[2] = {pit0_isr , pit1_isr};
