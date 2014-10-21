@@ -7,3 +7,10 @@
 //  CSE325 Embedded Microprocessor Systems
 //  Fall 2014
 //
+
+
+
+void hw_init()
+{
+	oct_rgb_led_init()
+}
