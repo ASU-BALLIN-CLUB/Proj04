@@ -12,6 +12,7 @@
 
 static uint32 const MCF_PIT_BASE = 0x40150000;
 
+
 #define MCF_PIT_PCSR(timer)  *((volatile uint16 *) (MCF_PIT_BASE + 0x00 + ((timer) << 4))
 #define MCF_PIT_PMR(timer)   *((volatile uint16 *) (MCF_PIT_BASE + 0x02 + ((timer) << 4))
 #define MCF_PIT_PCNTR(timer) *((volatile uint16 *) (MCF_PIT_BASE + 0x04 + ((timer) << 4))
