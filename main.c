@@ -8,13 +8,16 @@
 //  Fall 2014
 //
 
-
-
+typedef enum {
+	flash_mode = 1,
+	step_mode = 0
+} mode_t;
 
 static void hw_init()
 {
 	int_inhibit_all();
-	oct_rgb_led_init();
+	//oct_rgb_led_init();
+	uc_dipsw_init();
 	uc_pushb_init(uc_pushb_1, pushb_1_callback);
 	int_uninhibit_all();
 }
@@ -26,7 +29,19 @@ static void pushb_1_callback()
 
 static void run()
 {
-
+	mode_t state = (mode_t)uc_dipsw_get_state(uc_dipsw_1);
+	while(1)
+	{
+		state = (mode_t)uc_dipsw_get_state(uc_dipsw_1);
+		if(state == flash_mode)
+		{
+			oct_rgb_led_all_off();
+			while(state == flash_mode)
+			{
+				oct_rgb_led_init();
+			}
+		}
+	}
 }
 
 __declspec(noreturn) int main()
