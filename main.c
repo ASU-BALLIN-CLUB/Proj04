@@ -10,7 +10,27 @@
 
 
 
-void hw_init()
+
+static void hw_init()
 {
-	oct_rgb_led_init()
+	int_inhibit_all();
+	oct_rgb_led_init();
+	uc_pushb_init(uc_pushb_1, pushb_1_callback);
+	int_uninhibit_all();
+}
+
+static void pushb_1_callback()
+{
+
+}
+
+static void run()
+{
+
+}
+
+__declspec(noreturn) int main()
+{
+	hw_init();
+	run();
 }
