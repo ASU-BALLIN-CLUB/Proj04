@@ -25,3 +25,13 @@ typedef enum {
  pwm_channel_7  = 6, //
  pwm_channel_8  = 7 //
 } pwm_channel_t;
+
+typedef enum {
+ high_polarity = 1, //
+ low_polarity = 0 //
+} pwm_polarity_t;
+
+typedef enum {
+ left_aligned  = 0, //
+ center_aligned = 1 //
+} pwm_aligned_t;
