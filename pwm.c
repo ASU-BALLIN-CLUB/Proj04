@@ -28,12 +28,25 @@ static uint32 const MCF_PWM_BASE = 0x401B0000;
 
 void pwm_clk_config(clk_src_t const clk_src, uint8 const p_prescale, uint8 const p_scale)
 {
+	/*switch(clk_src)
+	{
+		case clk_src_a:
+			MCF_PWM_PWMCLK &= ~(1 << n);
+			break;
+		case clk_src_b:
+			MCF_PWM_PWMCLK &= ~(1 << n);
+			break;
+		default:
+			MCF_PWM_PWMCLK |= (1 << n);
+			break;
+	}*/
 	if(clk_src == clk_src_a || clk_src == clk_src_sa)
 	{
 		MCF_PWM_PWMPRCLK |= p_prescale;
 		if(clk_src == clk_src_sa)
 		{
 			MCF_PWM_PWMSCLA |= p_scale;
+			//MCF_PWM_PWMPER(0) |= 200;
 		}
 	}
 	else
@@ -42,11 +55,12 @@ void pwm_clk_config(clk_src_t const clk_src, uint8 const p_prescale, uint8 const
 		if(clk_src == clk_src_sb)
 		{
 			MCF_PWM_PWMSCLB |= p_scale;
+			//MCF_PWM_PWMPER(0) |= 200;
 		}
 	}
 }
 
-void pwm_chan_init(pwm_channel_t const n, clk_src_t const clk_src,uint8 const align, uint8 const polarity)
+void pwm_chan_init(pwm_channel_t const n, clk_src_t const clk, pwm_aligned_t const align, pwm_polarity_t const polarity)
 {
 	MCF_PWM_PWME &= ~(1 << n);
 	//gpio_port_init(p_port_tc, p_pin_0, gpio_funct_tertiary, p_data_dir_x, p_state_x);
