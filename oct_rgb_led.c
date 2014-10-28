@@ -148,9 +148,9 @@ static void oct_rgb_led_callback()
 		{
 			//void pwm_chan_start(pwm_channel_t const n, uint8 const period, uint8 const duty)
 
-			pwm_chan_start(pwm_channel_4, 200, m_red[LED1_COUNTER]);
-			pwm_chan_start(pwm_channel_5, 200, m_green[LED1_COUNTER]);
-			pwm_chan_start(pwm_channel_6, 200, m_blue[LED1_COUNTER]);
+			pwm_chan_start(pwm_channel_4, 200, g_color_duty[LED1_COUNTER].m_red);
+			pwm_chan_start(pwm_channel_5, 200, g_color_duty[LED1_COUNTER].m_green);
+			pwm_chan_start(pwm_channel_6, 200, g_color_duty[LED1_COUNTER].m_blue);
 			gpio_set_pin_state(gpio_port_an, gpio_pin_4, gpio_pin_state_high);
 			if(LED1_COUNTER > 0)
 			{
@@ -170,9 +170,9 @@ static void oct_rgb_led_callback()
 		{
 			//void pwm_chan_start(pwm_channel_t const n, uint8 const period, uint8 const duty)
 
-			pwm_chan_start(pwm_channel_4, 200, m_red[LED2_COUNTER]);
-			pwm_chan_start(pwm_channel_5, 200, m_green[LED2_COUNTER]);
-			pwm_chan_start(pwm_channel_6, 200, m_blue[LED2_COUNTER]);
+			pwm_chan_start(pwm_channel_4, 200, g_color_duty[LED2_COUNTER].m_red);
+			pwm_chan_start(pwm_channel_5, 200, g_color_duty[LED2_COUNTER].m_green);
+			pwm_chan_start(pwm_channel_6, 200, g_color_duty[LED2_COUNTER].m_blue);
 			gpio_set_pin_state(gpio_port_an, gpio_pin_6, gpio_pin_state_high);
 			if(LED2_COUNTER > 0)
 			{
@@ -192,9 +192,9 @@ static void oct_rgb_led_callback()
 		{
 			//void pwm_chan_start(pwm_channel_t const n, uint8 const period, uint8 const duty)
 
-			pwm_chan_start(pwm_channel_4, 200, m_red[LED3_COUNTER]);
-			pwm_chan_start(pwm_channel_5, 200, m_green[LED3_COUNTER]);
-			pwm_chan_start(pwm_channel_6, 200, m_blue[LED3_COUNTER]);
+			pwm_chan_start(pwm_channel_4, 200, g_color_duty[LED3_COUNTER].m_red);
+			pwm_chan_start(pwm_channel_5, 200, g_color_duty[LED3_COUNTER].m_green);
+			pwm_chan_start(pwm_channel_6, 200, g_color_duty[LED3_COUNTER].m_blue);
 			gpio_set_pin_state(gpio_port_an, gpio_pin_7, gpio_pin_state_high);
 			if(LED3_COUNTER > 0)
 			{
