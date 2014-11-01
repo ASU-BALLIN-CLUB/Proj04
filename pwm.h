@@ -8,6 +8,10 @@
 //  Fall 2014
 //
 
+#ifndef ____pwm__
+#define ____pwm__
+
+
 #include"gpio.h"
 #include"global.h"
 #include"int.h"
@@ -45,3 +49,5 @@ typedef enum {
  left_aligned  = 0, //
  center_aligned = 1 //
 } pwm_aligned_t;
+
+#endif
