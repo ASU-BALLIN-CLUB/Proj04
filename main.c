@@ -8,6 +8,17 @@
 //  Fall 2014
 //
 
+#includes"gpio.h"
+#includes"global.h"
+#includes"int.h"
+#includes"uc_dipsw.h"
+#includes"gpt.h"
+#includes"oct_rgb_led.h"
+#includes"pit.h"
+#includes"pwm.h"
+#includes"uc_pushb.h"
+
+
 typedef enum {
 	flash_mode = 1,
 	step_mode = 0
