@@ -8,8 +8,8 @@
 //  Fall 2014
 //
 
-#ifndef OCT_RGB_LED.H
-#define OCT_RGB_LED.H
+#ifndef ____oct_rgb_led__
+#define ____oct_rgb_led__
 
 #include "support_common.h"
 #include"gpio.h"
