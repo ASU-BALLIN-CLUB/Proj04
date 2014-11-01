@@ -8,6 +8,16 @@
 //  Fall 2014
 //
 
+#includes"gpio.h"
+#includes"global.h"
+#includes"int.h"
+#includes"uc_dipsw.h"
+#includes"gpt.h"
+#includes"oct_rgb_led.h"
+#includes"pit.h"
+#includes"pwm.h"
+#includes"uc_pushb.h"
+
 typedef enum {
  clk_src_a  = 0, //
  clk_src_sa = 1, //
