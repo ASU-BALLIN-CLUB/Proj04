@@ -11,7 +11,15 @@
 #ifndef ____uc_dipsw__
 #define ____uc_dipsw__
 #include "support_common.h"
-#include "gpio.h"
+#include"gpio.h"
+#include"global.h"
+#include"int.h"
+#include"uc_dipsw.h"
+#include"gpt.h"
+#include"oct_rgb_led.h"
+#include"pit.h"
+#include"pwm.h"
+#include"uc_pushb.h"
 
 
 typedef enum {
