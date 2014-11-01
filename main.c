@@ -47,9 +47,10 @@ static void run()
 		if(state == flash_mode)
 		{
 			oct_rgb_led_all_off();
+			oct_rgb_led_init();
 			while(state == flash_mode)
 			{
-				oct_rgb_led_init();
+				
 			}
 		}
 	}
