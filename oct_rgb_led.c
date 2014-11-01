@@ -144,6 +144,9 @@ static void oct_rgb_led_callback()
 	if(active_led == LED1_COM)	//LED1
 	{
 		gpio_set_pin_state(gpio_port_an, gpio_pin_4, gpio_pin_state_low);
+		gpio_set_pin_state(gpio_port_an, gpio_pin_6, gpio_pin_state_low);
+		gpio_set_pin_state(gpio_port_an, gpio_pin_7, gpio_pin_state_low);
+		oct_rgb_led_on(LED1_COM);
 		if(LED1_FLAG == true)
 		{
 			//void pwm_chan_start(pwm_channel_t const n, uint8 const period, uint8 const duty)
@@ -160,12 +163,16 @@ static void oct_rgb_led_callback()
 			{
 				LED1_COUNTER = 2;
 			}
+			oct_rgb_led_off(LED1_COM);
 		}
 		active_led = LED2_COM;
 	}
 	else if(active_led == LED2_COM)
 	{
+		gpio_set_pin_state(gpio_port_an, gpio_pin_4, gpio_pin_state_low);
 		gpio_set_pin_state(gpio_port_an, gpio_pin_6, gpio_pin_state_low);
+		gpio_set_pin_state(gpio_port_an, gpio_pin_7, gpio_pin_state_low);;
+		oct_rgb_led_on(LED2_COM);
 		if(LED2_FLAG == true)
 		{
 			//void pwm_chan_start(pwm_channel_t const n, uint8 const period, uint8 const duty)
@@ -182,12 +189,16 @@ static void oct_rgb_led_callback()
 			{
 				LED2_COUNTER = 2;
 			}
+			oct_rgb_led_off(LED1_COM);
 		}
 		active_led = LED3_COM;
 	}
 	else
 	{
+		gpio_set_pin_state(gpio_port_an, gpio_pin_4, gpio_pin_state_low);
+		gpio_set_pin_state(gpio_port_an, gpio_pin_6, gpio_pin_state_low);
 		gpio_set_pin_state(gpio_port_an, gpio_pin_7, gpio_pin_state_low);
+		oct_rgb_led_on(LED3_COM);
 		if(LED3_FLAG == true)
 		{
 			//void pwm_chan_start(pwm_channel_t const n, uint8 const period, uint8 const duty)
@@ -204,6 +215,7 @@ static void oct_rgb_led_callback()
 			{
 				LED3_COUNTER = 2;
 			}
+			oct_rgb_led_off(LED1_COM);
 		}
 		active_led = LED1_COM;
 	}
