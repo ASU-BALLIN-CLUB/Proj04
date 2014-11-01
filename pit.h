@@ -8,15 +8,15 @@
 //  Fall 2014
 //
 
-#includes"gpio.h"
-#includes"global.h"
-#includes"int.h"
-#includes"uc_dipsw.h"
-#includes"gpt.h"
-#includes"oct_rgb_led.h"
-#includes"pit.h"
-#includes"pwm.h"
-#includes"uc_pushb.h"
+#include"gpio.h"
+#include"global.h"
+#include"int.h"
+#include"uc_dipsw.h"
+#include"gpt.h"
+#include"oct_rgb_led.h"
+#include"pit.h"
+#include"pwm.h"
+#include"uc_pushb.h"
 
 typedef enum {
  pit_timer_0 = 0, //
