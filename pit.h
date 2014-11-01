@@ -8,6 +8,11 @@
 //  Fall 2014
 //
 
+#ifndef ____pit__
+#define ____pit__
+
+#include "support_common.h"
+
 #include"gpio.h"
 #include"global.h"
 #include"int.h"
@@ -25,3 +30,6 @@ typedef enum {
 
 static int_isr_t g_pit_callbacks[2] = {0};
 static int_isr_t g_pit_isrs[2] = {pit0_isr , pit1_isr};
+
+
+#endif
