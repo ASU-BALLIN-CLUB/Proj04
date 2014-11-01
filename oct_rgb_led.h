@@ -8,6 +8,11 @@
 //  Fall 2014
 //
 
+#ifndef OCT_RGB_LED.H
+#define OCT_RGB_LED.H
+
+#include "support_common.h"
+
 typedef enum {
  LED1_COM = 4, // Pin 4 of a GPIO port
  LED2_COM = 6, // Pin 6 of a GPIO port
