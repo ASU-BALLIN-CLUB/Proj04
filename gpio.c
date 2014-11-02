@@ -80,10 +80,10 @@ void gpio_port_set_pin_state(gpio_port_t p_port, gpio_pin_t p_pin, gpio_pin_stat
 	// If statement to check if the pin state is high or low.
 	if(p_state == gpio_pin_state_high)
 	{
-		GPIO_SET(p_port) |= p_pin;
+		GPIO_SET(p_port) |= (1 << p_pin);
 	}
 	else
 	{
-		GPIO_CLR(p_port) &= ~p_pin;
+		GPIO_CLR(p_port) &= ~(1 << p_pin);
 	}
 }
