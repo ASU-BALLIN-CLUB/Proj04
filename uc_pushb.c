@@ -57,7 +57,7 @@ void uc_pushb_debounce(uc_pushb_t const p_button)
 	do
 	{
 		state = (state << 1) | (uint16)signal | 0xE000;
-		signal = (~MCF_GPT_GPTPORT >> p_button) & 0x01;
+		signal = ((uint8)~MCF_GPT_GPTPORT >> p_button) & 0x01;
 	}while(state != 0xF000);
 }
 
