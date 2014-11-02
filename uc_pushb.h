@@ -12,7 +12,6 @@
 #include "support_common.h"
 #include "int.h"
 #include "gpio.h"
-#include "dtim.h"
 #include "gpt.h"
 #include "global.h"
 
